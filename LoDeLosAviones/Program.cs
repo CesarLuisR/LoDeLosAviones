@@ -12,6 +12,8 @@ namespace LoDeLosAviones
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
+            // Klk Alejandro
         }
     }
 }
