@@ -24,13 +24,19 @@ namespace LoDeLosAviones
 
         private void Fecha_Load(object sender, EventArgs e)
         {
-            monthCalendar2.MinDate = DateTime.Today;
-            monthCalendar1.MinDate = DateTime.Today;
+            fechaF.MinDate = DateTime.Today;
+            fechaI.MinDate = DateTime.Today;
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
         {
 
+        }
+
+        private void Listo_Click(object sender, EventArgs e)
+        {
+            Filtros.FechaInicio = fechaI.ToString();
+            Filtros.FechaFinal = fechaF.ToString();
         }
     }
 }
