@@ -39,6 +39,7 @@ namespace LoDeLosAviones
             Login login = new Login();
             login.Close();
             login.Hide();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -62,6 +63,44 @@ namespace LoDeLosAviones
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fecha_Click(object sender, EventArgs e)
+        {
+            Fecha f = new Fecha();
+            f.Show();
+        }
+
+        private void huespedes_Click(object sender, EventArgs e)
+        {
+            Huespe h = new Huespe();
+            h.Show();
+        }
+
+        private void ubicacion_Click(object sender, EventArgs e)
+        {
+            Ubicacion u = new Ubicacion();
+            u.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

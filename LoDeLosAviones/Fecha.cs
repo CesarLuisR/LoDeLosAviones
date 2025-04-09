@@ -37,6 +37,7 @@ namespace LoDeLosAviones
         {
             Filtros.FechaInicio = fechaI.ToString();
             Filtros.FechaFinal = fechaF.ToString();
+            this.Close();
         }
     }
 }
