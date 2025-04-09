@@ -11,7 +11,24 @@ namespace LoDeLosAviones
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            List<Usuario> usuarios = XMLMan.CargarObjetos<Usuario>(Files.usuarios);
+            bool found = false;
+            foreach (Usuario user in usuarios)
+            {
+                if (user.logged == true)
+                {
+                    LoggedUser.loggedUser = user;
+                    Application.Run(new Home());
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found == false)
+            {
+                Application.Run(new Login());
+            }
 
             // Klk Alejandro
             // Otra cosa mas
