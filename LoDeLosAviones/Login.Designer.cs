@@ -1,6 +1,6 @@
 ﻿namespace LoDeLosAviones
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,8 +34,11 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            NombreCargo = new TextBox();
-            textBox1 = new TextBox();
+            Nombre = new TextBox();
+            Contrasena = new TextBox();
+            entrar = new Button();
+            label6 = new Label();
+            registrarse = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -48,8 +51,9 @@
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = SystemColors.ControlLightLight;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(542, 83);
+            panel1.Size = new Size(434, 66);
             panel1.TabIndex = 0;
             // 
             // label2
@@ -57,9 +61,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(429, 12);
+            label2.Location = new Point(343, 10);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(34, 32);
+            label2.Size = new Size(28, 28);
             label2.TabIndex = 1;
             label2.Text = "--";
             // 
@@ -68,9 +73,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(483, 18);
+            label1.Location = new Point(386, 14);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(25, 25);
+            label1.Size = new Size(20, 20);
             label1.TabIndex = 1;
             label1.Text = "X";
             label1.Click += label1_Click;
@@ -80,20 +86,23 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(208, 131);
+            label3.Location = new Point(121, 119);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(108, 45);
+            label3.Size = new Size(190, 37);
             label3.TabIndex = 1;
-            label3.Text = "Login";
+            label3.Text = "Iniciar sesión";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(97, 240);
+            label4.Location = new Point(78, 192);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(93, 28);
+            label4.Size = new Size(79, 23);
             label4.TabIndex = 2;
             label4.Text = "Nombre";
             // 
@@ -102,53 +111,93 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(97, 372);
+            label5.Location = new Point(78, 265);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(124, 28);
+            label5.Size = new Size(106, 23);
             label5.TabIndex = 3;
             label5.Text = "Contraseña";
             // 
-            // NombreCargo
+            // Nombre
             // 
-            NombreCargo.BackColor = SystemColors.Info;
-            NombreCargo.Location = new Point(97, 281);
-            NombreCargo.Name = "NombreCargo";
-            NombreCargo.Size = new Size(329, 31);
-            NombreCargo.TabIndex = 32;
+            Nombre.BackColor = SystemColors.Info;
+            Nombre.Location = new Point(78, 225);
+            Nombre.Margin = new Padding(2);
+            Nombre.Name = "Nombre";
+            Nombre.Size = new Size(264, 27);
+            Nombre.TabIndex = 32;
             // 
-            // textBox1
+            // Contrasena
             // 
-            textBox1.BackColor = SystemColors.Info;
-            textBox1.Location = new Point(97, 412);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(329, 31);
-            textBox1.TabIndex = 33;
+            Contrasena.BackColor = SystemColors.Info;
+            Contrasena.Location = new Point(78, 297);
+            Contrasena.Margin = new Padding(2);
+            Contrasena.Name = "Contrasena";
+            Contrasena.PasswordChar = '*';
+            Contrasena.Size = new Size(264, 27);
+            Contrasena.TabIndex = 33;
+            // 
+            // entrar
+            // 
+            entrar.Location = new Point(53, 352);
+            entrar.Margin = new Padding(2);
+            entrar.Name = "entrar";
+            entrar.Size = new Size(133, 32);
+            entrar.TabIndex = 34;
+            entrar.Text = "Entrar";
+            entrar.UseVisualStyleBackColor = true;
+            entrar.Click += entrar_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(204, 358);
+            label6.Name = "label6";
+            label6.Size = new Size(20, 20);
+            label6.TabIndex = 35;
+            label6.Text = "O";
+            // 
+            // registrarse
+            // 
+            registrarse.Location = new Point(238, 352);
+            registrarse.Margin = new Padding(2);
+            registrarse.Name = "registrarse";
+            registrarse.Size = new Size(133, 32);
+            registrarse.TabIndex = 36;
+            registrarse.Text = "Registrarse";
+            registrarse.UseVisualStyleBackColor = true;
+            registrarse.Click += registrarse_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(176, 535);
+            button1.Location = new Point(192, 442);
             button1.Name = "button1";
-            button1.Size = new Size(166, 40);
-            button1.TabIndex = 34;
-            button1.Text = "Registrarse";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 37;
+            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 59, 104);
-            ClientSize = new Size(542, 705);
+            ClientSize = new Size(434, 564);
             Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(NombreCargo);
+            Controls.Add(registrarse);
+            Controls.Add(label6);
+            Controls.Add(entrar);
+            Controls.Add(Contrasena);
+            Controls.Add(Nombre);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
-            Text = "Form1";
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Margin = new Padding(2);
+            Name = "Login";
+            Text = "Registro";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -164,8 +213,11 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox NombreCargo;
-        private TextBox textBox1;
+        private TextBox Nombre;
+        private TextBox Contrasena;
+        private Button entrar;
+        private Label label6;
+        private Button registrarse;
         private Button button1;
     }
 }
