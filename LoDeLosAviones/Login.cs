@@ -24,7 +24,6 @@ namespace LoDeLosAviones
 
         private void label3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola");
         }
 
         private void registrarse_Click(object sender, EventArgs e)

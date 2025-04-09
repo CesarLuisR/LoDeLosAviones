@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace LoDeLosAviones
 {
-    public partial class DondeIr : Form
+    public partial class Ubicacion : Form
     {
-        public DondeIr()
+        public Ubicacion()
         {
             InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-        }
-
-        private void DondeIr_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
