@@ -12,9 +12,7 @@ namespace LoDeLosAviones
         public string Ubicacio;
         public string Fecha;
         public string Huespedes;
-        public double Presupuesto;
-
-        
+        public double Presupuesto;     
     } 
 
 
