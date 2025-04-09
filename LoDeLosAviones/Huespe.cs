@@ -45,12 +45,13 @@ namespace LoDeLosAviones
         private void button3_Click(object sender, EventArgs e)
         {
             childCounter++;
-            Ninos.Text += childCounter.ToString();
+            Ninos.Text = childCounter.ToString();
         }
 
         private void listo_Click(object sender, EventArgs e)
         {
             Filtros.Huespedes = adultCounter + childCounter;
+            this.Close();
         }
     }
 }
