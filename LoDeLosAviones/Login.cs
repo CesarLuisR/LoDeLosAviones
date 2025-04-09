@@ -42,8 +42,14 @@ namespace LoDeLosAviones
             {
                 if (Nombre.Text == usuario.obtenerNombre())
                 {
-                    usuario.logged = true;
                     found = true;
+                    if (Contrasena.Text != usuario.obtenerPassword())
+                    {
+                        MessageBox.Show("La contrase;a es incorrecta");
+                        break;
+                    }
+
+                    usuario.logged = true;
 
                     XMLMan.EditarObjeto<Usuario>(Files.usuarios, e => e.obtenerId() == usuario.obtenerId(), usuario);
 
