@@ -19,14 +19,6 @@ namespace LoDeLosAviones
 
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // DondeIr
-            // 
-            ClientSize = new Size(282, 253);
-            Name = "DondeIr";
-            Load += DondeIr_Load;
-            ResumeLayout(false);
         }
 
         private void DondeIr_Load(object sender, EventArgs e)
