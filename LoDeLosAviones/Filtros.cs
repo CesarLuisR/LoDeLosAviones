@@ -9,11 +9,10 @@ namespace LoDeLosAviones
 
     public class Filtros
     {
-        public string Ubicacio;
-        public string Fecha;
-        public string Huespedes;
-        public double Presupuesto;     
+        static public string Ubicacio;
+        static public string FechaInicio;
+        static public string FechaFinal;
+        static public int Huespedes;
+        static public double Presupuesto;     
     } 
-
-
 }

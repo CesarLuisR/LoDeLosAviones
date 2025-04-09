@@ -28,66 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            monthCalendar1 = new MonthCalendar();
-            monthCalendar2 = new MonthCalendar();
+            fechaI = new MonthCalendar();
+            fechaF = new MonthCalendar();
             Listo = new Button();
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
             // 
-            // monthCalendar1
+            // fechaI
             // 
-            monthCalendar1.Location = new Point(18, 134);
-            monthCalendar1.MinDate = new DateTime(2025, 4, 8, 23, 6, 31, 0);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 1;
-            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
+            fechaI.Location = new Point(14, 107);
+            fechaI.Margin = new Padding(7);
+            fechaI.MinDate = new DateTime(2025, 4, 8, 23, 6, 31, 0);
+            fechaI.Name = "fechaI";
+            fechaI.TabIndex = 1;
+            fechaI.DateChanged += monthCalendar1_DateChanged;
             // 
-            // monthCalendar2
+            // fechaF
             // 
-            monthCalendar2.Location = new Point(355, 134);
-            monthCalendar2.MinDate = new DateTime(2025, 4, 8, 0, 0, 0, 0);
-            monthCalendar2.Name = "monthCalendar2";
-            monthCalendar2.TabIndex = 2;
-            monthCalendar2.DateChanged += monthCalendar2_DateChanged;
+            fechaF.Location = new Point(284, 107);
+            fechaF.Margin = new Padding(7);
+            fechaF.MinDate = new DateTime(2025, 4, 8, 0, 0, 0, 0);
+            fechaF.Name = "fechaF";
+            fechaF.TabIndex = 2;
+            fechaF.DateChanged += monthCalendar2_DateChanged;
             // 
             // Listo
             // 
-            Listo.Location = new Point(269, 462);
+            Listo.Location = new Point(215, 370);
+            Listo.Margin = new Padding(2);
             Listo.Name = "Listo";
-            Listo.Size = new Size(131, 39);
+            Listo.Size = new Size(105, 31);
             Listo.TabIndex = 3;
             Listo.Text = "Listo";
             Listo.UseVisualStyleBackColor = true;
+            Listo.Click += Listo_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(472, 78);
+            label1.Location = new Point(378, 62);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(183, 25);
+            label1.Size = new Size(154, 20);
             label1.TabIndex = 4;
             label1.Text = "fecha final de reserva ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(73, 78);
+            label2.Location = new Point(58, 62);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(193, 25);
+            label2.Size = new Size(164, 20);
             label2.TabIndex = 5;
             label2.Text = "fecha inicial de reserva ";
             // 
             // Fecha
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(713, 549);
+            ClientSize = new Size(570, 439);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Listo);
-            Controls.Add(monthCalendar2);
-            Controls.Add(monthCalendar1);
+            Controls.Add(fechaF);
+            Controls.Add(fechaI);
+            Margin = new Padding(2);
             Name = "Fecha";
             Text = "Fecha";
             Load += Fecha_Load;
@@ -97,8 +104,8 @@
 
         #endregion
 
-        private MonthCalendar monthCalendar1;
-        private MonthCalendar monthCalendar2;
+        private MonthCalendar fechaI;
+        private MonthCalendar fechaF;
         private Button Listo;
         private Label label1;
         private Label label2;
