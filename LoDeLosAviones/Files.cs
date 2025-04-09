@@ -8,6 +8,6 @@ namespace LoDeLosAviones
 {
     internal class Files
     {
-        public static string usuarios = "C:/Users/cesarluis/source/repos/LoDeLosAviones/LoDeLosAviones/usuarios.xml";
+        public static string usuarios = "usuarios.xml";
     }
 }
