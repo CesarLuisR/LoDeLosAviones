@@ -41,7 +41,7 @@
             // fechaI
             // 
             fechaI.Location = new Point(14, 107);
-            fechaI.Margin = new Padding(7, 7, 7, 7);
+            fechaI.Margin = new Padding(7);
             fechaI.MinDate = new DateTime(2025, 4, 8, 23, 6, 31, 0);
             fechaI.Name = "fechaI";
             fechaI.TabIndex = 1;
@@ -50,7 +50,7 @@
             // fechaF
             // 
             fechaF.Location = new Point(284, 107);
-            fechaF.Margin = new Padding(7, 7, 7, 7);
+            fechaF.Margin = new Padding(7);
             fechaF.MinDate = new DateTime(2025, 4, 8, 0, 0, 0, 0);
             fechaF.Name = "fechaF";
             fechaF.TabIndex = 2;
@@ -93,6 +93,7 @@
             dias.Name = "dias";
             dias.Size = new Size(150, 27);
             dias.TabIndex = 6;
+            dias.ValueChanged += dias_ValueChanged;
             // 
             // label3
             // 

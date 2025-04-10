@@ -36,7 +36,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(529, 34);
+            button1.Location = new Point(483, 29);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(69, 43);
+            label1.Location = new Point(23, 38);
             label1.Name = "label1";
             label1.Size = new Size(108, 20);
             label1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(183, 43);
+            label2.Location = new Point(137, 38);
             label2.Name = "label2";
             label2.Size = new Size(137, 20);
             label2.TabIndex = 2;
@@ -66,9 +66,9 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(69, 85);
+            flowLayoutPanel1.Location = new Point(23, 80);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(603, 331);
+            flowLayoutPanel1.Size = new Size(1027, 331);
             flowLayoutPanel1.TabIndex = 3;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1077, 450);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label2);
             Controls.Add(label1);
