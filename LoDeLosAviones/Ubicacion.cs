@@ -26,7 +26,6 @@ namespace LoDeLosAviones
             .ToList();
             comboBox1.DataSource = ubicaciones;
             comboBox1.DroppedDown = true;
-        }
 
             ubicaciones.Add("Ninguno");
 
