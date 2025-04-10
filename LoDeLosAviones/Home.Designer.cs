@@ -43,6 +43,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             presupuesto = new NumericUpDown();
             label1 = new Label();
+            verReservas = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buscar).BeginInit();
             panel5.SuspendLayout();
@@ -200,11 +201,21 @@
             label1.TabIndex = 18;
             label1.Text = "presupuesto";
             // 
+            // verReservas
+            // 
+            verReservas.Location = new Point(12, 122);
+            verReservas.Name = "verReservas";
+            verReservas.Size = new Size(146, 29);
+            verReservas.TabIndex = 19;
+            verReservas.Text = "Ver reservas";
+            verReservas.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1193, 647);
+            Controls.Add(verReservas);
             Controls.Add(label1);
             Controls.Add(presupuesto);
             Controls.Add(flowLayoutPanel1);
@@ -245,5 +256,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private NumericUpDown presupuesto;
         private Label label1;
+        private Button verReservas;
     }
 }
