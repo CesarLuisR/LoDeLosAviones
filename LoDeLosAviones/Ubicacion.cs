@@ -21,12 +21,17 @@ namespace LoDeLosAviones
         {
             List<HotelInfo> hoteles = XMLMan.CargarObjetos<HotelInfo>(Files.hoteles);
             List<string> ubicaciones = hoteles
-            .Select(h => h.ubicacion)   
+            .Select(h => h.ubicacion)
             .Distinct()
             .ToList();
-
             comboBox1.DataSource = ubicaciones;
             comboBox1.DroppedDown = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.DroppedDown = true;
+
         }
     }
 }
