@@ -10,5 +10,6 @@ namespace LoDeLosAviones
     {
         public static string usuarios = "usuarios.xml";
         public static string hoteles = "hoteles1.xml";
+        public static string reservas = "reservas.xml";
     }
 }

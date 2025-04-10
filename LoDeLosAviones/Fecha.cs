@@ -37,7 +37,13 @@ namespace LoDeLosAviones
         {
             Filtros.FechaInicio = fechaI.ToString();
             Filtros.FechaFinal = fechaF.ToString();
+            Filtros.dias = int.Parse(dias.Value.ToString());
             this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
