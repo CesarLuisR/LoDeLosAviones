@@ -92,17 +92,21 @@ namespace LoDeLosAviones
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            // Boton de buscar supongo
+            // Cargar los hoteles desde el archivo XML
             List<HotelInfo> hotelInfos = XMLMan.CargarObjetos<HotelInfo>(Files.hoteles);
             flowLayoutPanel1.Controls.Clear();
+
+            bool notFound = true;
 
             // Recorrer cada hotel y crear los paneles con sus datos
             foreach (HotelInfo hotel in hotelInfos)
             {
-                    if (hotel.ubicacion != Filtros.Ubicacio && Filtros.Ubicacio != null && Filtros.Ubicacio != "Ninguno") continue;
-                    if (int.Parse(hotel.huespedes) < Filtros.Huespedes && Filtros.Huespedes != 0) continue;
-                    if (Filtros.Presupuesto < int.Parse(hotel.precio) && Filtros.Presupuesto != 0) continue;
+                // Filtrar por ubicación, número de huéspedes y presupuesto
+                if (hotel.ubicacion != Filtros.Ubicacio && Filtros.Ubicacio != null && Filtros.Ubicacio != "Ninguno") continue;
+                if (int.Parse(hotel.huespedes) < Filtros.Huespedes && Filtros.Huespedes != 0) continue;
+                if (Filtros.Presupuesto < int.Parse(hotel.precio) && Filtros.Presupuesto != 0) continue;
 
+                notFound = false;
                 Panel panel1 = CrearPanelHotel(hotel);
 
                 // Asegurarse de que se agregue al FlowLayoutPanel en el hilo principal
@@ -118,8 +122,40 @@ namespace LoDeLosAviones
                     flowLayoutPanel1.Controls.Add(panel1);
                 }
             }
-        }
 
+            // Si no se encuentran resultados, mostrar el mensaje
+            if (notFound)
+            {
+                // Asegurarse de que el FlowLayoutPanel esté configurado correctamente
+                flowLayoutPanel1.AutoSize = false;  // Desactivar AutoSize
+                flowLayoutPanel1.FlowDirection = FlowDirection.TopDown; // Asegura que los controles se alineen verticalmente
+                flowLayoutPanel1.WrapContents = false; // Evita que los controles se envuelvan a una nueva línea
+
+                // Crear el label de "No hay resultados"
+                Label no = new Label();
+                no.Text = "No hay resultados para la búsqueda";
+
+                // Configurar el Label para que ocupe todo el espacio disponible
+                no.TextAlign = ContentAlignment.MiddleCenter; // Centra el texto en el Label
+
+                // Mejorar el aspecto del label
+                no.Font = new Font("Arial", 14, FontStyle.Bold); // Establecer una fuente más grande y negrita
+                no.ForeColor = Color.White; // Cambiar el color del texto
+                no.BackColor = Color.Red; // Cambiar el color de fondo para hacerlo más visible
+                no.Padding = new Padding(10); // Añadir un poco de espacio alrededor del texto
+                no.Margin = new Padding(0, 10, 0, 10); // Añadir espacio adicional en la parte superior e inferior para un mejor margen
+
+                // Establecer un tamaño fijo para el Label, para asegurarse de que sea visible
+                no.Width = flowLayoutPanel1.ClientSize.Width - 20; // Ajusta el tamaño del Label al ancho del FlowLayoutPanel, dejando un margen
+                no.Height = 50; // Ajusta una altura fija para el Label
+
+                // Añadir el Label al FlowLayoutPanel
+                flowLayoutPanel1.Controls.Add(no);
+
+                // Para evitar que el siguiente control se acomode junto a este Label, usar SetFlowBreak
+                flowLayoutPanel1.SetFlowBreak(no, true);
+            }
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -160,8 +196,39 @@ namespace LoDeLosAviones
             foreach (HotelInfo hotel in hotelInfos)
             {
                 Panel panel1 = CrearPanelHotel(hotel);
+                panel1.Tag = hotel;
+                panel1.Click += Panel1_Click;
 
-                // Asegurarse de que se agregue al FlowLayoutPanel en el hilo principal
+                // Cursor y borde para el panel
+                panel1.Cursor = Cursors.Hand;
+                panel1.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                panel1.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+
+                // Asignar eventos a todos los hijos del panel
+                foreach (Control child in panel1.Controls)
+                {
+                    child.Click += Panel1_Click;
+                    child.Cursor = Cursors.Hand;
+                    child.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                    child.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+
+                    foreach (Control grandChild in child.Controls)
+                    {
+                        grandChild.Click += Panel1_Click;
+                        grandChild.Cursor = Cursors.Hand;
+                        grandChild.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                        grandChild.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+
+                        foreach (Control greatGrandChild in grandChild.Controls)
+                        {
+                            greatGrandChild.Click += Panel1_Click;
+                            greatGrandChild.Cursor = Cursors.Hand;
+                            greatGrandChild.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                            greatGrandChild.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+                        }
+                    }
+                }
+
                 if (flowLayoutPanel1.InvokeRequired)
                 {
                     flowLayoutPanel1.Invoke(new Action(() =>
@@ -229,10 +296,41 @@ namespace LoDeLosAviones
             }
             return label;
         }
+        private void Panel1_Click(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+
+            // Buscar el panel contenedor
+            Panel panel = null;
+
+            while (control != null && panel == null)
+            {
+                panel = control as Panel;
+                control = control.Parent;
+            }
+
+            if (panel != null)
+            {
+                HotelInfo hotel = panel.Tag as HotelInfo;
+
+                Reserva r = new Reserva(hotel);
+                r.Show();
+            }
+        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void presupuesto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void presupuesto_ValueChanged(object sender, EventArgs e)
+        {
+            Filtros.Presupuesto = int.Parse(presupuesto.Value.ToString());
         }
     }
 }

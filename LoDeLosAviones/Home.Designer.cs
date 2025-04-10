@@ -38,16 +38,18 @@
             panel3 = new Panel();
             label11 = new Label();
             pictureBox2 = new PictureBox();
-            fecha = new Button();
             huespedes = new Button();
             ubicacion = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            presupuesto = new NumericUpDown();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buscar).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)presupuesto).BeginInit();
             SuspendLayout();
             // 
             // cerrarSesion
@@ -151,16 +153,6 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
-            // fecha
-            // 
-            fecha.Location = new Point(218, 114);
-            fecha.Name = "fecha";
-            fecha.Size = new Size(248, 54);
-            fecha.TabIndex = 13;
-            fecha.Text = "fecha";
-            fecha.UseVisualStyleBackColor = true;
-            fecha.Click += fecha_Click;
-            // 
             // huespedes
             // 
             huespedes.Location = new Point(493, 114);
@@ -190,15 +182,34 @@
             flowLayoutPanel1.TabIndex = 16;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
+            // presupuesto
+            // 
+            presupuesto.Location = new Point(295, 129);
+            presupuesto.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            presupuesto.Name = "presupuesto";
+            presupuesto.Size = new Size(111, 27);
+            presupuesto.TabIndex = 17;
+            presupuesto.ValueChanged += presupuesto_ValueChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(199, 131);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 20);
+            label1.TabIndex = 18;
+            label1.Text = "presupuesto";
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1193, 647);
+            Controls.Add(label1);
+            Controls.Add(presupuesto);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(ubicacion);
             Controls.Add(huespedes);
-            Controls.Add(fecha);
             Controls.Add(panel1);
             Name = "Home";
             Text = "Home";
@@ -212,7 +223,9 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)presupuesto).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -227,9 +240,10 @@
         private Label label13;
         private Label label12;
         private Label label11;
-        private Button fecha;
         private Button huespedes;
         private Button ubicacion;
         private FlowLayoutPanel flowLayoutPanel1;
+        private NumericUpDown presupuesto;
+        private Label label1;
     }
 }

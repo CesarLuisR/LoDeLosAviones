@@ -13,6 +13,7 @@ namespace LoDeLosAviones
         static public string FechaInicio;
         static public string FechaFinal;
         static public int Huespedes;
-        static public double Presupuesto;     
+        static public double Presupuesto;
+        static public int dias;
     } 
 }
