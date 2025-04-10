@@ -34,6 +34,7 @@ namespace LoDeLosAviones
             label10.Text = currHotel.huespedes;
             label11.Text = currHotel.precio;
             label13.Text = Filtros.dias.ToString();
+            pictureBox1.ImageLocation = hotel.imagen;
         }
 
         private void EditarReserva_Load(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace LoDeLosAviones
 
             int precio = int.Parse(currHotel.precio) * Filtros.dias;
 
-            ReservaInfo reserva = new ReservaInfo(LoggedUser.loggedUser.nombre, currHotel.name, currHotel.ubicacion, Filtros.FechaInicio, Filtros.FechaFinal, Filtros.Huespedes.ToString(), $"{precio}");
+            ReservaInfo reserva = new ReservaInfo(LoggedUser.loggedUser.nombre, currHotel.name, currHotel.ubicacion, Filtros.FechaInicio, Filtros.FechaFinal, Filtros.Huespedes.ToString(), $"{precio}", currHotel.imagen);
             XMLMan.EditarObjeto(Files.reservas, e => e.name == currHotel.name && LoggedUser.loggedUser.nombre == e.User, reserva);
 
             ReservasUsuario r = new ReservasUsuario();
