@@ -86,6 +86,7 @@
             verReservas.TabIndex = 19;
             verReservas.Text = "Ver reservas";
             verReservas.UseVisualStyleBackColor = true;
+            verReservas.Click += verReservas_Click_2;
             // 
             // buscar
             // 
@@ -174,7 +175,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click_1;
             // 
             // pictureBox1
             // 
