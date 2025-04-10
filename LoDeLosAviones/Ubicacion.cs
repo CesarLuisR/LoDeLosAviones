@@ -24,10 +24,11 @@ namespace LoDeLosAviones
             .Select(h => h.ubicacion)
             .Distinct()
             .ToList();
+            ubicaciones.Add("Ninguno");
+
             comboBox1.DataSource = ubicaciones;
             comboBox1.DroppedDown = true;
 
-            ubicaciones.Add("Ninguno");
 
             comboBox1.DataSource = ubicaciones;
             // A;adir la opcion de ninguno
