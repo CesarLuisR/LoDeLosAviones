@@ -45,7 +45,7 @@ namespace LoDeLosAviones
                     found = true;
                     if (Contrasena.Text != usuario.obtenerPassword())
                     {
-                        MessageBox.Show("La contrase;a es incorrecta");
+
                         break;
                     }
 
