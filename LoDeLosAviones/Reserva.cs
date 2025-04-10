@@ -26,12 +26,12 @@ namespace LoDeLosAviones
         private void Reserva_Load(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void comboBoxCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace LoDeLosAviones
         }
 
         private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
