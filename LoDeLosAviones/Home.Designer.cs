@@ -53,9 +53,9 @@
             // 
             // cerrarSesion
             // 
-            cerrarSesion.Location = new Point(1070, 30);
+            cerrarSesion.Location = new Point(1061, 21);
             cerrarSesion.Name = "cerrarSesion";
-            cerrarSesion.Size = new Size(89, 29);
+            cerrarSesion.Size = new Size(109, 48);
             cerrarSesion.TabIndex = 0;
             cerrarSesion.Text = "Cerrar sesion";
             cerrarSesion.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             // 
             // verReservas
             // 
-            verReservas.Location = new Point(234, 28);
+            verReservas.Location = new Point(224, 28);
             verReservas.Name = "verReservas";
             verReservas.Size = new Size(146, 29);
             verReservas.TabIndex = 19;
@@ -91,7 +91,7 @@
             // buscar
             // 
             buscar.Image = (Image)resources.GetObject("buscar.Image");
-            buscar.Location = new Point(1004, 21);
+            buscar.Location = new Point(988, 19);
             buscar.Name = "buscar";
             buscar.Size = new Size(52, 50);
             buscar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(393, 30);
+            label1.Location = new Point(385, 32);
             label1.Name = "label1";
             label1.Size = new Size(90, 20);
             label1.TabIndex = 18;
@@ -121,7 +121,7 @@
             // 
             // presupuesto
             // 
-            presupuesto.Location = new Point(489, 28);
+            presupuesto.Location = new Point(481, 28);
             presupuesto.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             presupuesto.Name = "presupuesto";
             presupuesto.Size = new Size(63, 27);
@@ -130,7 +130,7 @@
             // 
             // huespedes
             // 
-            huespedes.Location = new Point(571, 17);
+            huespedes.Location = new Point(562, 15);
             huespedes.Name = "huespedes";
             huespedes.Size = new Size(200, 54);
             huespedes.TabIndex = 14;
@@ -140,7 +140,7 @@
             // 
             // ubicacion
             // 
-            ubicacion.Location = new Point(782, 17);
+            ubicacion.Location = new Point(773, 15);
             ubicacion.Name = "ubicacion";
             ubicacion.Size = new Size(200, 54);
             ubicacion.TabIndex = 15;
@@ -151,7 +151,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(246, 124);
+            flowLayoutPanel1.Location = new Point(241, 102);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(920, 511);
             flowLayoutPanel1.TabIndex = 16;

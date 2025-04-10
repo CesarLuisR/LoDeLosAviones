@@ -40,17 +40,17 @@
             panel2 = new Panel();
             avion = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
-            pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox6 = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)avion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // label3
@@ -154,10 +154,10 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label4);
-            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(pictureBox6);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
@@ -181,53 +181,53 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-75, 231);
+            pictureBox2.Location = new Point(-69, 208);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(211, 130);
+            pictureBox2.Size = new Size(203, 130);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.ChatGPT_Image_10_abr_2025__16_23_211;
-            pictureBox1.Location = new Point(142, 157);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(402, 395);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(495, 256);
+            pictureBox3.Location = new Point(480, 189);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(211, 130);
+            pictureBox3.Size = new Size(211, 111);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.ChatGPT_Image_9_abr_2025__20_15_001;
-            pictureBox5.Location = new Point(534, 339);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(144, 268);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 41;
-            pictureBox5.TabStop = false;
-            // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.ChatGPT_Image_9_abr_2025__20_15_002;
-            pictureBox4.Location = new Point(-101, 323);
+            pictureBox4.Location = new Point(-101, 299);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(274, 351);
+            pictureBox4.Size = new Size(299, 375);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 40;
             pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ChatGPT_Image_9_abr_2025__20_15_002;
+            pictureBox1.Location = new Point(160, 290);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(274, 351);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 42;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.ChatGPT_Image_9_abr_2025__20_15_002;
+            pictureBox6.Location = new Point(440, 270);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(274, 351);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 43;
+            pictureBox6.TabStop = false;
             // 
             // Login
             // 
@@ -244,10 +244,10 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)avion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -264,9 +264,9 @@
         private Panel panel2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
         private PictureBox avion;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox6;
     }
 }

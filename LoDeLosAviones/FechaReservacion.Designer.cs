@@ -37,46 +37,50 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(126, 71);
+            label2.Location = new Point(101, 57);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(193, 25);
+            label2.Size = new Size(164, 20);
             label2.TabIndex = 9;
             label2.Text = "fecha inicial de reserva ";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(526, 71);
+            label1.Location = new Point(421, 57);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(183, 25);
+            label1.Size = new Size(154, 20);
             label1.TabIndex = 8;
             label1.Text = "fecha final de reserva ";
             // 
             // fechaFinal
             // 
-            fechaFinal.Location = new Point(409, 127);
+            fechaFinal.Location = new Point(327, 102);
+            fechaFinal.Margin = new Padding(7, 7, 7, 7);
             fechaFinal.MinDate = new DateTime(2025, 4, 8, 0, 0, 0, 0);
             fechaFinal.Name = "fechaFinal";
             fechaFinal.TabIndex = 7;
             // 
             // fechaInicial
             // 
-            fechaInicial.Location = new Point(72, 127);
+            fechaInicial.Location = new Point(58, 102);
+            fechaInicial.Margin = new Padding(7, 7, 7, 7);
             fechaInicial.MinDate = new DateTime(2025, 4, 8, 23, 6, 31, 0);
             fechaInicial.Name = "fechaInicial";
             fechaInicial.TabIndex = 6;
             // 
             // FechaReservacion
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(640, 360);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(fechaFinal);
             Controls.Add(fechaInicial);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FechaReservacion";
             Text = "FechaReservacion";
             ResumeLayout(false);
