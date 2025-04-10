@@ -34,7 +34,7 @@ namespace LoDeLosAviones
             // Recorrer cada hotel y crear los paneles con sus datos
             foreach (ReservaInfo hotel in hotelInfos)
             {
-                HotelInfo hotelInfo = new HotelInfo(hotel.name, "", hotel.precio, hotel.ubicacion, hotel.huespedes, "");
+                HotelInfo hotelInfo = new HotelInfo(hotel.name, "", hotel.precio, hotel.ubicacion, hotel.huespedes, hotel.imagen);
 
                 if (hotel.User != LoggedUser.loggedUser.nombre) continue;
 
@@ -101,7 +101,7 @@ namespace LoDeLosAviones
             Label label10 = CrearLabel(hotel.name, new Point(266, 3), new Font("Segoe UI", 13.8F, FontStyle.Bold));
 
             PictureBox pictureBox1 = new PictureBox();
-            pictureBox1.Image = Properties.Resources.ChatGPT_Image_8_abr_2025__01_59_27_p_m_;  // Cambiar a la imagen correcta
+            pictureBox1.ImageLocation = hotel.imagen;// Cambiar a la imagen correcta
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(257, 191);
