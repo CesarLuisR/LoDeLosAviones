@@ -290,7 +290,7 @@ namespace LoDeLosAviones
             Label label10 = CrearLabel(hotel.name, new Point(266, 3), new Font("Segoe UI", 13.8F, FontStyle.Bold));
 
             PictureBox pictureBox1 = new PictureBox();
-            pictureBox1.Image = Properties.Resources.ChatGPT_Image_8_abr_2025__01_59_27_p_m_;  // Cambiar a la imagen correcta
+            pictureBox1.ImageLocation = hotel.imagen;  // Cambiar a la imagen correcta
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(257, 191);
@@ -372,6 +372,12 @@ namespace LoDeLosAviones
         }
 
         private void verReservas_Click_1(object sender, EventArgs e)
+        {
+            ReservasUsuario h = new ReservasUsuario();
+            h.Show();
+        }
+
+        private void verReservas_Click_2(object sender, EventArgs e)
         {
             ReservasUsuario h = new ReservasUsuario();
             h.Show();

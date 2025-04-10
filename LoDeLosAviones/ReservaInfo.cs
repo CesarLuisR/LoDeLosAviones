@@ -16,8 +16,9 @@ namespace LoDeLosAviones
         public string fechaFin;
         public string huespedes;
         public string precio;
+        public string imagen;
 
-        public ReservaInfo(string user, string name, string ubicacion, string fechaInicio, string fechaFin, string huespedes, string precio)
+        public ReservaInfo(string user, string name, string ubicacion, string fechaInicio, string fechaFin, string huespedes, string precio, string imagen)
         {
             User = user;
             this.name = name;
@@ -26,6 +27,7 @@ namespace LoDeLosAviones
             this.fechaFin = fechaFin;
             this.huespedes = huespedes;
             this.precio = precio;
+            this.imagen = imagen;
         }
 
         public ReservaInfo() { }
