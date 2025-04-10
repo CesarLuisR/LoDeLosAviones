@@ -93,6 +93,16 @@ namespace LoDeLosAviones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_10_abr_2025__16_23_21 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 10 abr 2025, 16_23_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_8_abr_2025__01_59_27_p_m_ {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 8 abr 2025, 01_59_27 p.m.", resourceCulture);
@@ -146,6 +156,16 @@ namespace LoDeLosAviones.Properties {
         internal static System.Drawing.Bitmap heart_clipart_lg {
             get {
                 object obj = ResourceManager.GetObject("heart-clipart-lg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_cloud_natural_materials_sky {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-cloud-natural-materials-sky", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

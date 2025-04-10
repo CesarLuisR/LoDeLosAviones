@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            label2 = new Label();
-            label1 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -39,54 +37,22 @@
             entrar = new Button();
             label6 = new Label();
             registrarse = new Button();
-            button1 = new Button();
-            panel1.SuspendLayout();
+            panel2 = new Panel();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(30, 38, 70);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.ForeColor = SystemColors.ControlLightLight;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(434, 66);
-            panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(343, 10);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(28, 28);
-            label2.TabIndex = 1;
-            label2.Text = "--";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(386, 14);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 20);
-            label1.TabIndex = 1;
-            label1.Text = "X";
-            label1.Click += label1_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(121, 119);
+            label3.Location = new Point(638, 226);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(190, 37);
@@ -99,7 +65,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(78, 192);
+            label4.Location = new Point(597, 285);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(79, 23);
@@ -111,7 +77,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(78, 265);
+            label5.Location = new Point(597, 358);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(106, 23);
@@ -121,7 +87,7 @@
             // Nombre
             // 
             Nombre.BackColor = SystemColors.Info;
-            Nombre.Location = new Point(78, 225);
+            Nombre.Location = new Point(597, 318);
             Nombre.Margin = new Padding(2);
             Nombre.Name = "Nombre";
             Nombre.Size = new Size(264, 27);
@@ -130,7 +96,7 @@
             // Contrasena
             // 
             Contrasena.BackColor = SystemColors.Info;
-            Contrasena.Location = new Point(78, 297);
+            Contrasena.Location = new Point(597, 390);
             Contrasena.Margin = new Padding(2);
             Contrasena.Name = "Contrasena";
             Contrasena.PasswordChar = '*';
@@ -139,7 +105,7 @@
             // 
             // entrar
             // 
-            entrar.Location = new Point(53, 352);
+            entrar.Location = new Point(572, 445);
             entrar.Margin = new Padding(2);
             entrar.Name = "entrar";
             entrar.Size = new Size(133, 32);
@@ -152,7 +118,7 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(204, 358);
+            label6.Location = new Point(723, 451);
             label6.Name = "label6";
             label6.Size = new Size(20, 20);
             label6.TabIndex = 35;
@@ -160,7 +126,7 @@
             // 
             // registrarse
             // 
-            registrarse.Location = new Point(238, 352);
+            registrarse.Location = new Point(757, 445);
             registrarse.Margin = new Padding(2);
             registrarse.Name = "registrarse";
             registrarse.Size = new Size(133, 32);
@@ -169,22 +135,57 @@
             registrarse.UseVisualStyleBackColor = true;
             registrarse.Click += registrarse_Click;
             // 
-            // button1
+            // panel2
             // 
-            button1.Location = new Point(192, 442);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 37;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(398, 540);
+            panel2.TabIndex = 38;
+            panel2.Paint += panel2_Paint;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(191, 61);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(211, 130);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 11;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(-25, 113);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(211, 130);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ChatGPT_Image_10_abr_2025__16_23_21;
+            pictureBox1.Location = new Point(-4, 160);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(402, 395);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 59, 104);
-            ClientSize = new Size(434, 564);
-            Controls.Add(button1);
+            BackColor = Color.SkyBlue;
+            ClientSize = new Size(1040, 540);
+            Controls.Add(panel2);
             Controls.Add(registrarse);
             Controls.Add(label6);
             Controls.Add(entrar);
@@ -193,23 +194,22 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Login";
+            Opacity = 0.9D;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Registro";
             Load += Form1_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Label label1;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -219,5 +219,9 @@
         private Label label6;
         private Button registrarse;
         private Button button1;
+        private Panel panel2;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox1;
     }
 }

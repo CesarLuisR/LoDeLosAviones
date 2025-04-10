@@ -61,8 +61,13 @@ namespace LoDeLosAviones
                 }
             }
 
-            if (!found) 
+            if (!found)
                 MessageBox.Show("No existe el usuario");
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
