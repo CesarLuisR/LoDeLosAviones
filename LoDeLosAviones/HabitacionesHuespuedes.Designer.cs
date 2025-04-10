@@ -46,10 +46,10 @@
             // listo
             // 
             listo.ForeColor = SystemColors.MenuHighlight;
-            listo.Location = new Point(448, 358);
+            listo.Location = new Point(358, 286);
             listo.Margin = new Padding(2);
             listo.Name = "listo";
-            listo.Size = new Size(231, 52);
+            listo.Size = new Size(185, 42);
             listo.TabIndex = 19;
             listo.Text = "listo";
             listo.UseVisualStyleBackColor = true;
@@ -57,28 +57,28 @@
             // Ninos
             // 
             Ninos.AutoSize = true;
-            Ninos.Location = new Point(507, 197);
+            Ninos.Location = new Point(406, 158);
             Ninos.Margin = new Padding(2, 0, 2, 0);
             Ninos.Name = "Ninos";
-            Ninos.Size = new Size(0, 25);
+            Ninos.Size = new Size(0, 20);
             Ninos.TabIndex = 18;
             // 
             // adultos
             // 
             adultos.AutoSize = true;
-            adultos.Location = new Point(515, 106);
+            adultos.Location = new Point(412, 85);
             adultos.Margin = new Padding(2, 0, 2, 0);
             adultos.Name = "adultos";
-            adultos.Size = new Size(0, 25);
+            adultos.Size = new Size(0, 20);
             adultos.TabIndex = 17;
             // 
             // button3
             // 
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(583, 185);
+            button3.Location = new Point(466, 148);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(52, 42);
+            button3.Size = new Size(42, 34);
             button3.TabIndex = 16;
             button3.Text = "+";
             button3.UseVisualStyleBackColor = true;
@@ -86,10 +86,10 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(448, 184);
+            button4.Location = new Point(358, 147);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
-            button4.Size = new Size(54, 42);
+            button4.Size = new Size(43, 34);
             button4.TabIndex = 15;
             button4.Text = "-";
             button4.UseVisualStyleBackColor = true;
@@ -97,10 +97,10 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(583, 96);
+            button2.Location = new Point(466, 77);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(52, 42);
+            button2.Size = new Size(42, 34);
             button2.TabIndex = 14;
             button2.Text = "+";
             button2.UseVisualStyleBackColor = true;
@@ -108,10 +108,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(448, 96);
+            button1.Location = new Point(358, 77);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(54, 42);
+            button1.Size = new Size(43, 34);
             button1.TabIndex = 13;
             button1.Text = "-";
             button1.UseVisualStyleBackColor = true;
@@ -119,39 +119,39 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(121, 184);
+            label3.Location = new Point(97, 147);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(58, 25);
+            label3.Size = new Size(47, 20);
             label3.TabIndex = 12;
             label3.Text = "Niños";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(121, 106);
+            label2.Location = new Point(97, 85);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(74, 25);
+            label2.Size = new Size(60, 20);
             label2.TabIndex = 11;
             label2.Text = "Adultos";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(507, 280);
+            label1.Location = new Point(406, 224);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(0, 25);
+            label1.Size = new Size(0, 20);
             label1.TabIndex = 23;
             // 
             // button5
             // 
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(583, 268);
+            button5.Location = new Point(466, 214);
             button5.Margin = new Padding(2);
             button5.Name = "button5";
-            button5.Size = new Size(52, 42);
+            button5.Size = new Size(42, 34);
             button5.TabIndex = 22;
             button5.Text = "+";
             button5.UseVisualStyleBackColor = true;
@@ -159,10 +159,10 @@
             // button6
             // 
             button6.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(448, 267);
+            button6.Location = new Point(358, 214);
             button6.Margin = new Padding(2);
             button6.Name = "button6";
-            button6.Size = new Size(54, 42);
+            button6.Size = new Size(43, 34);
             button6.TabIndex = 21;
             button6.Text = "-";
             button6.UseVisualStyleBackColor = true;
@@ -170,18 +170,19 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(121, 267);
+            label4.Location = new Point(97, 214);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(114, 25);
+            label4.Size = new Size(96, 20);
             label4.TabIndex = 20;
             label4.Text = "Habitaciones";
             // 
             // HabitacionesHuespuedes
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(640, 360);
             Controls.Add(label1);
             Controls.Add(button5);
             Controls.Add(button6);
@@ -195,6 +196,7 @@
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "HabitacionesHuespuedes";
             Text = "HabitacionesHuespuedes";
             ResumeLayout(false);
