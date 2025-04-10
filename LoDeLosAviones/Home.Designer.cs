@@ -76,6 +76,7 @@
             // 
             // buscar
             // 
+            buscar.Image = Properties.Resources.pool;
             buscar.Location = new Point(947, 16);
             buscar.Name = "buscar";
             buscar.Size = new Size(114, 50);

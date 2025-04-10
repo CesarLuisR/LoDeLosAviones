@@ -9,6 +9,6 @@ namespace LoDeLosAviones
     internal class Files
     {
         public static string usuarios = "usuarios.xml";
-        public static string hoteles = "hoteles.xml";
+        public static string hoteles = "hoteles1.xml";
     }
 }

@@ -93,7 +93,31 @@ namespace LoDeLosAviones
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             // Boton de buscar supongo
+            List<HotelInfo> hotelInfos = XMLMan.CargarObjetos<HotelInfo>(Files.hoteles);
+            flowLayoutPanel1.Controls.Clear();
 
+            // Recorrer cada hotel y crear los paneles con sus datos
+            foreach (HotelInfo hotel in hotelInfos)
+            {
+                    if (hotel.ubicacion != Filtros.Ubicacio && Filtros.Ubicacio != null && Filtros.Ubicacio != "Ninguno") continue;
+                    if (int.Parse(hotel.huespedes) < Filtros.Huespedes && Filtros.Huespedes != 0) continue;
+                    if (Filtros.Presupuesto < int.Parse(hotel.precio) && Filtros.Presupuesto != 0) continue;
+
+                Panel panel1 = CrearPanelHotel(hotel);
+
+                // Asegurarse de que se agregue al FlowLayoutPanel en el hilo principal
+                if (flowLayoutPanel1.InvokeRequired)
+                {
+                    flowLayoutPanel1.Invoke(new Action(() =>
+                    {
+                        flowLayoutPanel1.Controls.Add(panel1);
+                    }));
+                }
+                else
+                {
+                    flowLayoutPanel1.Controls.Add(panel1);
+                }
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
