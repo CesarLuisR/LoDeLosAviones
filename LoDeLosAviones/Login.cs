@@ -1,4 +1,6 @@
 
+using System.Drawing.Drawing2D;
+
 namespace LoDeLosAviones
 {
     public partial class Login : Form
@@ -6,15 +8,35 @@ namespace LoDeLosAviones
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
+        private async void MoverImagenSuavemente()
+        {
+            avion.BackColor = Color.Transparent;
+            for (int i = 0; i < 20000; i++) // Cantidad de pasos que quieras
+            {
+                avion.BringToFront();
+                if (i % 4 == 0)
+                {
+                    avion.Top -= 1;  // Mover hacia arriba a un ritmo menor
+                    avion.Width = (int)(avion.Width * 0.99999999); // Reducir el tamaño en 1% en cada paso
+                    avion.Height = (int)(avion.Height * 0.9999999); // Reducir el tamaño en 1% en cada paso
+                }
+                avion.Left += 3; // Aumentar la cantidad para mover más rápido a la derecha
 
+                // Reducir el tamaño de la imagen de forma gradual
+
+                await Task.Delay(50); // Esperar 10 milisegundos entre cada movimiento
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+            MoverImagenSuavemente();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,8 +83,18 @@ namespace LoDeLosAviones
                 }
             }
 
-            if (!found) 
+            if (!found)
                 MessageBox.Show("No existe el usuario");
+        }
+        
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

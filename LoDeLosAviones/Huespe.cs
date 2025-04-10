@@ -13,7 +13,7 @@ namespace LoDeLosAviones
 {
     public partial class Huespe : Form
     {
-        int adultCounter = 0;
+        int adultCounter = Filtros.Huespedes;
         int childCounter = 0;
         public Huespe()
         {

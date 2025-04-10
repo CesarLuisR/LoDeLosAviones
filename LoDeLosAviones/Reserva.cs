@@ -22,6 +22,7 @@ namespace LoDeLosAviones
             label3.Text = hotel.precio;
             label4.Text = hotel.ubicacion;
             label5.Text = hotel.huespedes;
+            pictureBox1.ImageLocation = hotel.imagen;
             currHotel = hotel;
         }
 
@@ -87,7 +88,7 @@ namespace LoDeLosAviones
 
             int precio = int.Parse(currHotel.precio) * Filtros.dias;
 
-            ReservaInfo reserva = new ReservaInfo(LoggedUser.loggedUser.nombre, currHotel.name, currHotel.ubicacion, Filtros.FechaInicio, Filtros.FechaFinal, Filtros.Huespedes.ToString(), $"{precio}");
+            ReservaInfo reserva = new ReservaInfo(LoggedUser.loggedUser.nombre, currHotel.name, currHotel.ubicacion, Filtros.FechaInicio, Filtros.FechaFinal, Filtros.Huespedes.ToString(), $"{precio}", currHotel.imagen);
             XMLMan.GuardarObjeto(reserva, Files.reservas);
             this.Close();
         }

@@ -15,6 +15,7 @@ namespace LoDeLosAviones
         public Fecha()
         {
             InitializeComponent();
+
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -26,6 +27,7 @@ namespace LoDeLosAviones
         {
             fechaF.MinDate = DateTime.Today;
             fechaI.MinDate = DateTime.Today;
+            dias.Value = Filtros.dias;
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
@@ -42,6 +44,11 @@ namespace LoDeLosAviones
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dias_ValueChanged(object sender, EventArgs e)
         {
 
         }
