@@ -37,6 +37,8 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             button1.Name = "button1";
             button1.Size = new Size(206, 45);
             button1.TabIndex = 4;
-            button1.Text = "hab., huésped";
+            button1.Text = "Numero de huespedes";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -109,7 +111,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(225, 452);
+            label3.Location = new Point(315, 452);
             label3.Name = "label3";
             label3.Size = new Size(50, 20);
             label3.TabIndex = 9;
@@ -127,17 +129,38 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(225, 422);
+            label5.Location = new Point(392, 423);
             label5.Name = "label5";
             label5.Size = new Size(146, 20);
             label5.TabIndex = 11;
             label5.Text = "Huespedes maximos";
+            label5.Click += label5_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(225, 423);
+            label6.Name = "label6";
+            label6.Size = new Size(149, 20);
+            label6.TabIndex = 12;
+            label6.Text = "Huespedes maximos:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(225, 452);
+            label7.Name = "label7";
+            label7.Size = new Size(79, 20);
+            label7.TabIndex = 13;
+            label7.Text = "Precio c/d:";
             // 
             // Reserva
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(775, 655);
+            Controls.Add(label7);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -167,5 +190,7 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }
