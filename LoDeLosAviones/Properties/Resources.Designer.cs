@@ -73,6 +73,26 @@ namespace LoDeLosAviones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2025_04_09_224243 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2025-04-09 224243", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2025_04_09_224737 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2025-04-09 224737", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_8_abr_2025__01_59_27_p_m_ {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 8 abr 2025, 01_59_27 p.m.", resourceCulture);
