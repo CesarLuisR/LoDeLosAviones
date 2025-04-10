@@ -103,6 +103,26 @@ namespace LoDeLosAviones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_9_abr_2025__20_10_31 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 9 abr 2025, 20_10_31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_9_abr_2025__20_15_00 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 9 abr 2025, 20_15_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap heart_clipart_lg {
             get {
                 object obj = ResourceManager.GetObject("heart-clipart-lg", resourceCulture);
