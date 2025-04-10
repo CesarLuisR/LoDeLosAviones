@@ -53,5 +53,10 @@ namespace LoDeLosAviones
             Filtros.Huespedes = adultCounter + childCounter;
             this.Close();
         }
+
+        private void Huespe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

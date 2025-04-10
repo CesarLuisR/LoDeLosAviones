@@ -28,12 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Ubicacion";
+            comboBox1 = new ComboBox();
+            listo = new Button();
+            SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(10, 10);
+            comboBox1.Margin = new Padding(2);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(458, 28);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // listo
+            // 
+            listo.Location = new Point(182, 379);
+            listo.Name = "listo";
+            listo.Size = new Size(94, 29);
+            listo.TabIndex = 1;
+            listo.Text = "Listo";
+            listo.UseVisualStyleBackColor = true;
+            listo.Click += listo_Click;
+            // 
+            // Ubicacion
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(503, 442);
+            Controls.Add(listo);
+            Controls.Add(comboBox1);
+            Margin = new Padding(2);
+            Name = "Ubicacion";
+            Text = "Ubicacion";
+            Load += Ubicacion_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ComboBox comboBox1;
+        private Button listo;
     }
 }
