@@ -71,11 +71,30 @@ namespace LoDeLosAviones
                 return;
             }
 
+            List<ReservaInfo> list = XMLMan.CargarObjetos<ReservaInfo>(Files.reservas);
+
+            bool found = false;
+            foreach (ReservaInfo info in list)
+            {
+                if (info.name == currHotel.name && info.User == LoggedUser.loggedUser.nombre) found = true;
+            }
+
+            if (found == true)
+            {
+                MessageBox.Show("Este hotel ya lo tiene reservado");
+                return;
+            }
+
             int precio = int.Parse(currHotel.precio) * Filtros.dias;
 
             ReservaInfo reserva = new ReservaInfo(LoggedUser.loggedUser.nombre, currHotel.name, currHotel.ubicacion, Filtros.FechaInicio, Filtros.FechaFinal, Filtros.Huespedes.ToString(), $"{precio}");
             XMLMan.GuardarObjeto(reserva, Files.reservas);
             this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

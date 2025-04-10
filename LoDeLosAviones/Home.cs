@@ -107,7 +107,39 @@ namespace LoDeLosAviones
                 if (Filtros.Presupuesto < int.Parse(hotel.precio) && Filtros.Presupuesto != 0) continue;
 
                 notFound = false;
+
                 Panel panel1 = CrearPanelHotel(hotel);
+                panel1.Tag = hotel;
+                panel1.Click += Panel1_Click;
+
+                panel1.Cursor = Cursors.Hand;
+                panel1.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                panel1.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+
+                // Asignar eventos a todos los hijos del panel
+                foreach (Control child in panel1.Controls)
+                {
+                    child.Click += Panel1_Click;
+                    child.Cursor = Cursors.Hand;
+                    child.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                    child.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+
+                    foreach (Control grandChild in child.Controls)
+                    {
+                        grandChild.Click += Panel1_Click;
+                        grandChild.Cursor = Cursors.Hand;
+                        grandChild.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                        grandChild.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+
+                        foreach (Control greatGrandChild in grandChild.Controls)
+                        {
+                            greatGrandChild.Click += Panel1_Click;
+                            greatGrandChild.Cursor = Cursors.Hand;
+                            greatGrandChild.MouseEnter += (s, e) => { panel1.BorderStyle = BorderStyle.FixedSingle; };
+                            greatGrandChild.MouseLeave += (s, e) => { panel1.BorderStyle = BorderStyle.None; };
+                        }
+                    }
+                }
 
                 // Asegurarse de que se agregue al FlowLayoutPanel en el hilo principal
                 if (flowLayoutPanel1.InvokeRequired)
@@ -331,6 +363,18 @@ namespace LoDeLosAviones
         private void presupuesto_ValueChanged(object sender, EventArgs e)
         {
             Filtros.Presupuesto = int.Parse(presupuesto.Value.ToString());
+        }
+
+        private void verReservas_Click(object sender, EventArgs e)
+        {
+            ReservasUsuario h = new ReservasUsuario();
+            h.Show();
+        }
+
+        private void verReservas_Click_1(object sender, EventArgs e)
+        {
+            ReservasUsuario h = new ReservasUsuario();
+            h.Show();
         }
     }
 }

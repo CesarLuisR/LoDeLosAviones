@@ -209,6 +209,7 @@
             verReservas.TabIndex = 19;
             verReservas.Text = "Ver reservas";
             verReservas.UseVisualStyleBackColor = true;
+            verReservas.Click += verReservas_Click_1;
             // 
             // Home
             // 
