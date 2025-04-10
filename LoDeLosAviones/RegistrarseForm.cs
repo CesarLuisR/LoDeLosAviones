@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace LoDeLosAviones
 {
@@ -15,6 +18,7 @@ namespace LoDeLosAviones
         public RegistrarseForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
         private void RegistrarseForm_Load(object sender, EventArgs e)
@@ -28,6 +32,7 @@ namespace LoDeLosAviones
             l.Show();
             this.Close();
         }
+
 
         private void crear_Click(object sender, EventArgs e)
         {
@@ -57,6 +62,25 @@ namespace LoDeLosAviones
             Login l = new Login();
             l.Show();
             this.Close();
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                this.ClientRectangle,
+                Color.DarkGreen,     // Color inicial
+                Color.LightGreen,    // Color final
+                LinearGradientMode.Vertical)) // Dirección del degradado
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Transparent;
+
         }
     }
 }
