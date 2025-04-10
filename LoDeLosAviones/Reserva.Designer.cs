@@ -94,7 +94,6 @@
             button4.TabIndex = 7;
             button4.Text = "Fecha de reserva";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += this.button4_Click;
             // 
             // label2
             // 
