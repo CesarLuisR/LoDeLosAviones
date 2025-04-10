@@ -376,5 +376,11 @@ namespace LoDeLosAviones
             ReservasUsuario h = new ReservasUsuario();
             h.Show();
         }
+
+        private void verReservas_Click_2(object sender, EventArgs e)
+        {
+            ReservasUsuario h = new ReservasUsuario();
+            h.Show();
+        }
     }
 }
